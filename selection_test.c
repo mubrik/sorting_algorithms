@@ -22,14 +22,14 @@ int main(void)
     print_array(array, n);
     printf("\n");
     printf("Expected: 7, 13, 19, 48, 52, 71, 73, 86, 96, 99\n");
-    bubble_sort(array, n);
+    selection_sort(array, n);
     print_array(array, n);
     printf("testing:");
     n = sizeof(arrayb) / sizeof(arrayb[0]);
     print_array(arrayb, n);
     printf("\n");
     printf("Expected: 1, 1\n");
-    bubble_sort(arrayb, n);
+    selection_sort(arrayb, n);
     printf("\n");
     print_array(arrayb, n);
     printf("testing:\n");
@@ -37,7 +37,7 @@ int main(void)
     print_array(arrayc, n);
     printf("\n");
     printf("Expected: 1, 2\n");
-    bubble_sort(arrayc, n);
+    selection_sort(arrayc, n);
     printf("\n");
     print_array(arrayc, n);
     printf("testing:\n");
@@ -45,7 +45,7 @@ int main(void)
     print_array(arrayd, n);
     printf("\n");
     printf("Expected: -73, -71, -52, -48, -13, -1, 2, 86, 96, 99\n");
-    bubble_sort(arrayd, n);
+    selection_sort(arrayd, n);
     printf("\n");
     print_array(arrayd, n);
     printf("testing:\n");
@@ -53,7 +53,7 @@ int main(void)
     print_array(arraye, n);
     printf("\n");
     printf("Expected: -73, -71, -52, -48, -13, -2, 0, 0, 96, 99\n");
-    bubble_sort(arraye, n);
+    selection_sort(arraye, n);
     printf("\n");
     print_array(arraye, n);
     printf("testing:\n");
@@ -61,7 +61,7 @@ int main(void)
     print_array(arrayf, n);
     printf("\n");
     printf("Expected: 20\n");
-    bubble_sort(arrayf, n);
+    selection_sort(arrayf, n);
     printf("\n");
     print_array(arrayf, n);
     printf("testing no swap:\n");
@@ -69,7 +69,7 @@ int main(void)
     print_array(arrayg, n);
     printf("\n");
     printf("Expected: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1\n");
-    bubble_sort(arrayg, n);
+    selection_sort(arrayg, n);
     printf("\n");
     print_array(arrayg, n);
     return (0);

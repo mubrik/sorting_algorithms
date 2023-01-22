@@ -2,44 +2,31 @@
 
 
 /**
- * insertion_sort_list - insertion_sort_list
- * @list: array to sort
+ * selection_sort - selection_sort
+ * @array: array to sort
+ * @size: size of array to sort
  * Return: ptr to arr or null
  */
-void insertion_sort_list(listint_t **list)
+void selection_sort(int *array, size_t size)
 {
-  listint_t *head = NULL, *prev = NULL, *nxt = NULL, *tmp = NULL, *prv = NULL;
+	size_t i = 0, j = 0;
+	int sel_num, tmp;
 
-  if (!list)
-    return;
-  head = *list;
-  /* main loop */
-  while (head)
-  {
-    prev = head->prev, nxt = head->next;
-    while (prev)
-    {
-      prv = prev->prev;
-      if (prev->n > prev->next->n)
-      {
-        /* swap */
-        if (prev->prev)
-          prev->prev->next = prev->next;
-        if (prev->next->next)
-          prev->next->next->prev = prev;
-        tmp = prev->next->next;
-        /* config next */
-        prev->next->next = prev, prev->next->prev = prev->prev;
-        /* config prev */
-        prev->prev = prev->next, prev->next = tmp;
-      }
-      /* code */
-      prev = prv;
-    }
-    if (!nxt)
-      break;
-    head = nxt;
-  }
+	if (size < 2)
+		return;
 
-  return;
+	while (array && i <= (size - 1))
+	{
+		sel_num = array[i], j = i + 1;
+		while (j <= (size - 1))
+		{
+			if (array[j] < sel_num)
+			{
+				tmp = sel_num, sel_num = array[j], array[j] = tmp;
+				print_array(array, size);
+			}
+			j++;
+		}
+		array[i] = sel_num, i++;
+	}
 }
