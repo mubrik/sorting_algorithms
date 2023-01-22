@@ -34,7 +34,7 @@ void selection_sort(int *array, size_t size)
 }
 
 /**
- * selection_sort - selection_sort original
+ * selection_sort_b - selection_sort original
  * @array: array to sort
  * @size: size of array to sort
  * Return: ptr to arr or null
